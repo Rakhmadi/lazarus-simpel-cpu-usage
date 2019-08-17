@@ -1,0 +1,123 @@
+
+2018.04.08
++ add: used Hi-dpi resource icons (for foldbar context menu, for mouse middle click), by FTurtle
+
+2018.04.07
++ add: IsCharWord() func uses UnicodeData now, works for all international letters
+
+2018.04.06
++ add: new resource PNG file for "mouse middle click scroll" feature
++ add: better resource make scripts
+
+2018.04.04
++ add: Gaps.OnDelete event
++ add: TATSynGapItem.Control field
+
+2018.04.03
++ add: to support inline editors (like Adobe Brackets), added method DoGetGapRect
+
+2018.04.02
++ add: part of code separated to ATSynEdit_CharSizer unit
++ add: in CharSizer unit, added global option for proportional font rendering (proportional for char codes >127), it fixes wrong width of many Unicode characters
+
+2018.03.11
++ add: minimap tooltip: it shows several lines for mouse cursor pos, when mouse is over minimap
++ add: prop OptMinimapTooltipVisible
++ add: prop OptMinimapTooltipLinesCount
++ add: prop OptMinimapTooltipWidthPercents
++ add: prop Colors.MinimapTooltipBG
++ add: prop Colors.MinimapTooltipBorder
+
+2018.03.10
++ add: Ctrl+click must call context menu on macOS
+* deleted prop OptMouseDownForPopup, code made simpler
+
+2018.03.06
++ improved logic of CaretItem.SavedX field (field is also renamed), to be like in SynWrite and tested on CudaText
+
+2018.02.27
++ add: prop OptScrollbarHorizontalHidden
+- fix: can write LineTop for hidden control too
+- fix: major fix for IME input
+
+2018.02.06
++ rewritten bookmarks support. now bookmarks are not embedded into Strings items, they are in separate Strings.Bookmarks object. now bookmarks aren't deleted if their lines are deleted - good.
++ smaller size of Strings item
++ added unit atsynedit_bookmarks
+* deleted unit atstrings_hints 
+* deprecated Strings.LinesBm[]
+* deleted Strings.LinesHint[]
+
+2018.01.31
+- fix: stupid bug (fix: char->widechar) in detect pixel width of CJK text
++ add: prop OptMaxLineLengthForSlowWidthDetect (500)
+
+2018.01.29
+- fix commands "extend carets up/down..."- must consider tab-chars
+
+2018.01.25
++ allow OptIndentSize value 0: it uses OptTabSize, OptTabSpaces
+
+2018.01.23
++ call OnHotspotExit on mouse leave, on scrolling, on command
+
+2018.01.21
++ consider zero-width-space char U+200B
+
+2018.01.19
++ added Hotspots object, see wiki description about it
++ added events OnHotspotEnter, OnHotspotExit
+* on macOS, Command-key is used instead of Ctrl-key (in features with Ctrl press)
+
+2018.01.12
++ Ctrl+(double click) now _adds_ caret with word
++ finder: add DoAction_FindSimple()
+- finder: fixed search for find-str with trailing LF (if multi-line input used)
+
+2018.01.10
++ many optimizations for texts with huge lines (tested on file with 4M line len)
++ ATStrings: added method LineSub (faster than Strings.Lines[i]+Copy)
+* ATStrings: increased size of TATStringItem by Longint, sorry
+* ATStringProc: renamed several props, added prefix Opt
+* ATStringProc: renamed OptHexCharsUser to OptHexChars
+* ATStringProc: changed logic of OptHexCharsDefault, don't add strings OptHexChars+OptHexCharsDefault in each call of IsCharHex (faster)
+
+2018.01.08
++ don't calc URLs in too long lines. property OptMaxLineLenToCalcURL=300
++ add global option OptAllowSpecialWidthChars (to disable rendering of 170% width chars)
++ add {$ifdef at_show_scroll_info} (to debug)
+
+2017.12.30
++ use fast TFPSList.DeleteRange in Strings.TextDeleteRange to fast del big block w/o using undo
++ use local copy of FPC's fgl.pp as atsynedit_fgl.pas
+
+2017.12.14
+* change declaration of TATFinderProgress
+
+2017.12.11
++ change storage of WrapInfo items to generic list TFPGList
++ optimized ATStrings item size
+
+2017.12.09
+* delete function SCommentLineAction, better do it in user app
++ optimized by adding prop Strings.LinesUTF8[]
++ optimized Strings.TextDeleteRange, do fast delete block, no undo, if block is too big
++ big rewrite of ATStrings storage using generic list TFPSList
+
+2017.12.07
++ support new Laz API (trunk) OnMouseWheelHorz
+
+2017.12.04
++ optimized ATStrings item size (bitpacked record)
++ change storage ATStrings to generic list
+
+2017.11.26
+- fix: if tab-char exists at line start, column selection was wrong
+
+2017.11.24
++ add func SClipboardCopy; fix it for LCL GTK2 bug with trailing zero
+
+2017.11.14
++ finder: usual (non regex) search engine rewritten totally, don't use StringBuffer, fast
+
+(older log: only in github)

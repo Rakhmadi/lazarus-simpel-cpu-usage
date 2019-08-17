@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Columns Count="8">
+    <Column0 Order="0" Visible="True" Width="60"/>
+    <Column1 Order="1" Visible="True" Width="120"/>
+    <Column2 Order="2" Visible="True" Width="120"/>
+    <Column3 Order="3" Visible="True" Width="60"/>
+    <Column4 Order="4" Visible="True" Width="60"/>
+    <Column5 Order="5" Visible="True" Width="60"/>
+    <Column6 Order="6" Visible="True" Width="60"/>
+    <Column7 Order="7" Visible="True" Width="60"/>
+  </Columns>
+</CONFIG>

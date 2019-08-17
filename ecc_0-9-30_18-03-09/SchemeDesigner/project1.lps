@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="19">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="15" Y="19"/>
+        <UsageCount Value="215"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="schemedesigner.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SchemeDsgn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SchemeDesigner"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="64" Y="8"/>
+        <UsageCount Value="215"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../EC_Controls/ecscheme.pas"/>
+        <UnitName Value="ECScheme"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1431"/>
+        <CursorPos X="3" Y="1435"/>
+        <UsageCount Value="106"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/customcheckgroup.inc"/>
+        <TopLine Value="83"/>
+        <CursorPos Y="103"/>
+        <UsageCount Value="6"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/customform.inc"/>
+        <TopLine Value="910"/>
+        <CursorPos Y="930"/>
+        <UsageCount Value="6"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/dialogs.pp"/>
+        <TopLine Value="15"/>
+        <CursorPos X="25" Y="35"/>
+        <UsageCount Value="54"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/stdctrls.pp"/>
+        <TopLine Value="1429"/>
+        <CursorPos X="15" Y="1458"/>
+        <UsageCount Value="6"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/customlistbox.inc"/>
+        <TopLine Value="574"/>
+        <CursorPos X="3" Y="576"/>
+        <UsageCount Value="4"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/customlabel.inc"/>
+        <TopLine Value="438"/>
+        <CursorPos X="3" Y="474"/>
+        <UsageCount Value="6"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/actnlist.pas"/>
+        <TopLine Value="24"/>
+        <CursorPos X="14" Y="45"/>
+        <UsageCount Value="21"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/customaction.inc"/>
+        <TopLine Value="236"/>
+        <CursorPos X="39" Y="246"/>
+        <UsageCount Value="21"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/containedaction.inc"/>
+        <TopLine Value="72"/>
+        <CursorPos X="21" Y="98"/>
+        <UsageCount Value="21"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../Lazarus_Qt/fpc/rtl/objpas/classes/classesh.inc"/>
+        <TopLine Value="1849"/>
+        <CursorPos X="14" Y="1869"/>
+        <UsageCount Value="21"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../../Lazarus_Qt/fpc/rtl/objpas/classes/action.inc"/>
+        <TopLine Value="120"/>
+        <CursorPos X="3" Y="122"/>
+        <UsageCount Value="21"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/menus.pp"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="205"/>
+        <CursorPos X="3" Y="243"/>
+        <UsageCount Value="9"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../../Lazarus_Qt/lazarus/lcl/include/menuitem.inc"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="91"/>
+        <CursorPos X="20" Y="98"/>
+        <UsageCount Value="9"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:/lazarus/lcl/include/customcontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="88"/>
+        <CursorPos Y="126"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:/lazarus/lcl/include/wincontrol.inc"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="4741"/>
+        <CursorPos Y="4762"/>
+        <UsageCount Value="22"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:/lazarus/components/lazutils/laz2_dom.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <CursorPos X="45" Y="131"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+    </Units>
+    <JumpHistory Count="10" HistoryIndex="9">
+      <Position1>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="257" Column="15" TopLine="250"/>
+      </Position1>
+      <Position2>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="310" Column="20" TopLine="292"/>
+      </Position2>
+      <Position3>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="307" Column="8" TopLine="292"/>
+      </Position3>
+      <Position4>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="798" Column="3" TopLine="768"/>
+      </Position4>
+      <Position5>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="799" Column="3" TopLine="769"/>
+      </Position5>
+      <Position6>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="800" Column="3" TopLine="770"/>
+      </Position6>
+      <Position7>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="796" Column="50" TopLine="776"/>
+      </Position7>
+      <Position8>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="651" Column="30" TopLine="627"/>
+      </Position8>
+      <Position9>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="651" Column="30"/>
+      </Position9>
+      <Position10>
+        <Filename Value="schemedesigner.pas"/>
+        <Caret Line="318" Column="3" TopLine="316"/>
+      </Position10>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

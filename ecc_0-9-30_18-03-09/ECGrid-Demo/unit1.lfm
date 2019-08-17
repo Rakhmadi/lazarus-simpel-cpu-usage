@@ -1,0 +1,219 @@
+object Form1: TForm1
+  Left = 309
+  Height = 781
+  Top = 104
+  Width = 1020
+  Caption = 'ECGrid Demo'
+  ClientHeight = 781
+  ClientWidth = 1020
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.6'
+  object PageControl1: TPageControl
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 781
+    Top = 0
+    Width = 1020
+    ActivePage = TabSheet1
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = '10k Col x 10M rows'
+      ClientHeight = 755
+      ClientWidth = 1012
+      object ECGrid1: TECGrid
+        AnchorSideLeft.Control = TabSheet1
+        AnchorSideTop.Control = TabSheet1
+        AnchorSideRight.Control = TabSheet1
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = TabSheet1
+        AnchorSideBottom.Side = asrBottom
+        Left = 2
+        Height = 751
+        Top = 2
+        Width = 1008
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Around = 2
+        Columns = <>
+        FixedCols = 1
+        Options = [egoHilightCol, egoHilightRow, egoHorizontalLines, egoVerticalLines]
+        TabOrder = 0
+        OnGetDataRowCount = ECGrid1GetDataRowCount
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Order of Columns'
+      ClientHeight = 757
+      ClientWidth = 1016
+      object ECGrid2: TECGrid
+        AnchorSideLeft.Control = TabSheet2
+        AnchorSideTop.Control = TabSheet2
+        AnchorSideRight.Control = TabSheet2
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = ECSpeedBtn1
+        Left = 2
+        Height = 680
+        Top = 2
+        Width = 1012
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Bottom = 3
+        BorderSpacing.Around = 2
+        Columns = <        
+          item
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = [fsBold]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Index'
+            Width = 60
+            OnGetDataCellText = ECGrid2Columns0GetDataCellText
+          end        
+          item
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = []
+            MinWidth = 15
+            Options = [ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.FontOptions.FontStyles = [fsBold, fsUnderline]
+            Title.Text = 'Name'
+            Width = 120
+            OnGetDataCellText = ECGrid2Columns1GetDataCellText
+          end        
+          item
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = [fsItalic]
+            MinWidth = 15
+            Options = [ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Category'
+            Width = 120
+            OnGetDataCellText = ECGrid2Columns2GetDataCellText
+          end        
+          item
+            EnlargeWidth = 20
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = []
+            MinWidth = 15
+            Options = [ecoEnlargePixels, ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Count'
+            Width = 60
+            OnGetDataCellText = ECGrid2Columns3GetDataCellText
+          end        
+          item
+            EnlargeWidth = 20
+            FontOptions.FontColor = clBlue
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = []
+            MinWidth = 15
+            Options = [ecoEnlargePixels, ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Depth'
+            Width = 60
+            OnGetDataCellText = ECGrid2Columns4GetDataCellText
+          end        
+          item
+            EnlargeWidth = 20
+            FontOptions.FontColor = clBlue
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = []
+            MinWidth = 15
+            Options = [ecoEnlargePixels, ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Height'
+            Width = 60
+            OnGetDataCellText = ECGrid2Columns5GetDataCellText
+          end        
+          item
+            EnlargeWidth = 20
+            FontOptions.FontColor = clBlue
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = []
+            MinWidth = 15
+            Options = [ecoEnlargePixels, ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Width'
+            Width = 60
+            OnGetDataCellText = ECGrid2Columns6GetDataCellText
+          end        
+          item
+            EnlargeWidth = 20
+            FontOptions.FontSize = 0
+            FontOptions.FontStyles = []
+            MinWidth = 15
+            Options = [ecoEnlargePixels, ecoSizing, ecoVisible]
+            Title.FontOptions.FontSize = 0
+            Title.Text = 'Weight'
+            Width = 60
+            OnGetDataCellText = ECGrid2Columns7GetDataCellText
+          end>
+        FixedCols = 1
+        Options = [egoColMoving, egoColSizing, egoHorizontalLines, egoUseOrder, egoVerticalLines]
+        TabOrder = 0
+        OnGetDataRowCount = ECGrid2GetDataRowCount
+        OnSelectEditor = ECGrid2SelectEditor
+      end
+      object ECSpeedBtn1: TECSpeedBtn
+        AnchorSideLeft.Control = ECSpeedBtn2
+        AnchorSideRight.Control = ECSpeedBtn2
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = ECSpeedBtn2
+        Left = 858
+        Height = 30
+        Top = 687
+        Width = 150
+        Anchors = [akLeft, akRight, akBottom]
+        BorderSpacing.Bottom = 5
+        Caption = 'Save Order'
+        GlyphColor = clRed
+        GlyphDesign = egdArrowDec
+        OnClick = ECSpeedBtn1Click
+      end
+      object ECSpeedBtn2: TECSpeedBtn
+        AnchorSideRight.Control = TabSheet2
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = TabSheet2
+        AnchorSideBottom.Side = asrBottom
+        Left = 858
+        Height = 30
+        Top = 722
+        Width = 150
+        Anchors = [akRight, akBottom]
+        BorderSpacing.Right = 8
+        BorderSpacing.Bottom = 5
+        Caption = 'Load Order'
+        GlyphColor = 49152
+        GlyphDesign = egdArrowInc
+        OnClick = ECSpeedBtn2Click
+      end
+      object Edit1: TEdit
+        Left = 177
+        Height = 20
+        Top = 707
+        Width = 80
+        AutoSize = False
+        OnKeyDown = Edit1KeyDown
+        TabOrder = 1
+        Text = 'Edit1'
+        Visible = False
+      end
+      object SpinEdit1: TSpinEdit
+        Left = 272
+        Height = 19
+        Top = 707
+        Width = 50
+        AutoSelect = False
+        MaxValue = 500
+        OnKeyDown = Edit1KeyDown
+        TabOrder = 2
+        Visible = False
+      end
+    end
+  end
+end

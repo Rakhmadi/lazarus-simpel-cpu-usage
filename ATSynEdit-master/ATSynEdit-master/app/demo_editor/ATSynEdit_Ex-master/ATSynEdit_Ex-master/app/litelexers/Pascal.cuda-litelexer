@@ -1,0 +1,34 @@
+{
+  "files": "*.pas;*.pp;*.inc",
+  "case_sens": false,
+  "rules": {
+    "cmt": {
+      "regex": "//.*",
+      "style": "Comment"
+    },
+    "cmt2": {
+      "regex": "\\{.+?\\}",
+      "style": "Comment"
+    },
+    "keyw": {
+      "regex": "\\b(and|array|as|asm|begin|case|class|const|constructor|default|destructor|div|do|downto|else|end|except|exports|finalization|finally|for|function|goto|if|implementation|in|inherited|initialization|interface|is|mod|nil|not|object|of|or|out|private|procedure|program|property|protected|public|published|raise|record|repeat|self|set|string|then|to|try|type|unit|until|uses|var|while|with|xor)\\b",
+      "style": "IdKeyword"
+    },
+    "id": {
+      "regex": "[a-z_]\\w*",
+      "style": "Id"
+    },
+    "num": {
+      "regex": "\\d+(\\.\\d+)?([eE][-\\+]?\\d+)?",
+      "style": "Number"
+    },
+    "str": {
+      "regex": "\\'.*?\\'",
+      "style": "String"
+    },
+    "sym": {
+      "regex": "[\\-\\+\\*/\\(\\)\\[\\]\\{\\}\\|\\\\\\.,:;=`~!@\\#\\$%\\^&\\?<>]",
+      "style": "Symbol"
+    }
+  }
+}

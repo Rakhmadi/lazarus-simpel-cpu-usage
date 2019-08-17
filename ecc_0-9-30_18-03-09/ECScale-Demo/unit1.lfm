@@ -1,0 +1,132 @@
+object Form1: TForm1
+  Left = 418
+  Height = 505
+  Top = 238
+  Width = 796
+  Caption = 'TECScale Demo'
+  ClientHeight = 505
+  ClientWidth = 796
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.6'
+  object PageControl1: TPageControl
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 505
+    Top = 0
+    Width = 796
+    ActivePage = TabSheet2
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 1
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'TECScale'
+      ClientHeight = 479
+      ClientWidth = 788
+      object TIPropertyGrid1: TTIPropertyGrid
+        AnchorSideTop.Control = TabSheet1
+        AnchorSideRight.Control = TabSheet1
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = TabSheet1
+        Left = 415
+        Height = 479
+        Top = 0
+        Width = 373
+        Align = alRight
+        CheckboxForBoolean = False
+        DefaultValueFont.Color = clWindowText
+        Filter = [tkInteger, tkChar, tkEnumeration, tkFloat, tkSet, tkMethod, tkSString, tkLString, tkAString, tkWString, tkVariant, tkArray, tkRecord, tkInterface, tkClass, tkObject, tkWChar, tkBool, tkInt64, tkQWord, tkDynArray, tkInterfaceRaw, tkProcVar, tkUString, tkUChar, tkHelper, tkFile, tkClassRef, tkPointer]
+        Indent = 10
+        NameFont.Color = clWindowText
+        ValueFont.Color = clMaroon
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'property Correction'
+      ClientHeight = 479
+      ClientWidth = 788
+      object ECRuler1: TECRuler
+        Left = 12
+        Height = 36
+        Hint = '0'
+        Top = 81
+        Width = 629
+        IndentBottomRight = 20
+        IndentTopLeft = 20
+        ParentShowHint = False
+        PositionToHint = True
+        Scale.DateTimeFormat = 'hh:nn:ss'
+        Scale.LogarithmBase = 10
+        Scale.Max = 99.9
+        Scale.Min = 0.1
+        Scale.TickLongValue = 10
+        Scale.TickMiddleValue = 5
+        Scale.TickShortValue = 1
+        ScaleFontOptions.FontSize = 7
+        ScaleFontOptions.FontStyles = []
+        ShowHint = True
+      end
+      object ECRuler2: TECRuler
+        Left = 12
+        Height = 36
+        Hint = '0'
+        Top = 29
+        Width = 629
+        IndentBottomRight = 20
+        IndentTopLeft = 20
+        ParentShowHint = False
+        PositionToHint = True
+        Scale.DateTimeFormat = 'hh:nn:ss'
+        Scale.LogarithmBase = 10
+        Scale.Max = 100
+        Scale.Min = 0
+        Scale.TickLongValue = 10
+        Scale.TickMiddleValue = 5
+        Scale.TickShortValue = 1
+        ScaleFontOptions.FontSize = 7
+        ScaleFontOptions.FontStyles = []
+        ShowHint = True
+      end
+      object CheckBox1: TCheckBox
+        Left = 662
+        Height = 17
+        Top = 102
+        Width = 72
+        Caption = 'Correction'
+        OnChange = CheckBox1Change
+        TabOrder = 2
+      end
+      object Label1: TLabel
+        Left = 649
+        Height = 13
+        Top = 29
+        Width = 78
+        Caption = 'Bounds 0 .. 100'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 649
+        Height = 13
+        Top = 81
+        Width = 90
+        Caption = 'Bounds 0,1 .. 99,9'
+        ParentColor = False
+      end
+      object Memo1: TMemo
+        Left = 55
+        Height = 160
+        Top = 144
+        Width = 313
+        Lines.Strings = (
+          'Correction is public property (available only via code).'
+          'It can make Scale nicer when the bound values are not integer multipliers of the TickLongValue.'
+        )
+        TabOrder = 3
+      end
+    end
+  end
+end

@@ -1,0 +1,117 @@
+object Form1: TForm1
+  Left = 551
+  Height = 72
+  Top = 224
+  Width = 371
+  Align = alLeft
+  BorderStyle = bsNone
+  ClientHeight = 72
+  ClientWidth = 371
+  Color = clBlack
+  DefaultMonitor = dmDesktop
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 22
+    Top = 36
+    Width = 11
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Arial Rounded MT Bold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+  end
+  object BGRAFlashProgressBar1: TBGRAFlashProgressBar
+    Left = 56
+    Height = 22
+    Top = 36
+    Width = 304
+    MinValue = 0
+    MaxValue = 100
+    Value = 0
+    OnClick = BGRAFlashProgressBar1Click
+    Color = clAqua
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 22
+    Top = 36
+    Width = 16
+    Caption = '%'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Arial Rounded MT Bold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 371
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 32
+    ClientWidth = 371
+    Color = 3681038
+    ParentColor = False
+    TabOrder = 0
+    OnMouseDown = Panel1MouseDown
+    OnMouseMove = Panel1MouseMove
+    OnMouseUp = Panel1MouseUp
+    object Image1: TImage
+      Left = 352
+      Height = 19
+      Top = 8
+      Width = 16
+      OnClick = Image1Click
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963F701000089504E47
+        0D0A1A0A0000000D4948445200000010000000100803000000282D0F53000000
+        0373424954080808DBE14FE000000009704859730000006F0000006F01F1A2DC
+        430000001974455874536F667477617265007777772E696E6B73636170652E6F
+        72679BEE3C1A000000A5504C5445FFFFFFFF0000FF0000BF0000E41B1BD30F0F
+        D20E0EE11B1BE31A1AE11C1CE31B1BE11B1BCD0D0DCE0D0DCD0D0DCF0D0DE21B
+        1BCB0B0BC90A0AD61313C90A0AD21010E21B1BC40606D21010D54D4DD54E4ED7
+        1414D75858D85B5BD95D5DDB6767DC6D6DE18080E18181E21B1BE45353E64D4D
+        E84D4DEA5656EB5F5FEB6363EC6666EC6D6DED7474EE7676EE7777F08787F088
+        88FEFBFBFEFCFCFEFDFDFFFBFBFFFDFDFFFEFECD726F1A0000001774524E5300
+        01030426464A707F80B3B5B6B6BEBEE6EAEEEFF0F3F6600E1C27000000A14944
+        415418574D8FE91682201085B128025B68132B2B6B5ACD164B7CFF476B06C9D3
+        FDC199FB0D1766184371A9B45692B35A8188C0291281F321340A8908F893C03C
+        DE3FDDC85C0F98E24C62792E9F00F97B1D03F498A26656BE729B1A138362DA65
+        335BA147A23DB8579F1D0133AF230F9B26C59EC0C43D7AA17C526C118CDCB7C7
+        0D35970B3CBAF5602BE335F88DEEC9B8DD2CE748BFE5F7A5F5A7B36187EA2F07
+        8617B82CF3A7820000000049454E44AE426082
+      }
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 18
+      Top = 8
+      Width = 90
+      Caption = 'CPU Usage'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Arial Rounded MT Bold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 384
+  end
+end

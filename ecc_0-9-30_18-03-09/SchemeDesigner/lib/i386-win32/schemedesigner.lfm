@@ -1,0 +1,1734 @@
+object SchemeDsgn: TSchemeDsgn
+  Left = 118
+  Height = 640
+  Top = 121
+  Width = 1280
+  Caption = 'ECScheme Designer'
+  ClientHeight = 640
+  ClientWidth = 1280
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '1.5'
+  object ECScheme: TECScheme
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = SplitterV
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 2
+    Height = 636
+    Hint = 'Use middle button or [Ctrl]+left button'#10'to create a new connection.'
+    Top = 2
+    Width = 443
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 2
+    ParentShowHint = False
+    PopupMenu = PMScheme
+    ShowHint = True
+    TabOrder = 0
+    OnContextPopup = ECSchemeContextPopup
+    OnSchemeChange = ECSchemeSchemeChange
+    OnSelectionChange = ECSchemeSelectionChange
+  end
+  object Panel: TPanel
+    AnchorSideLeft.Control = SplitterV
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 455
+    Height = 640
+    Top = 0
+    Width = 825
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 640
+    ClientWidth = 825
+    TabOrder = 1
+    object LBDev: TListBox
+      AnchorSideLeft.Control = LabDev
+      AnchorSideTop.Control = LabDev
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = SplitterH
+      Left = 8
+      Height = 357
+      Top = 23
+      Width = 200
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Top = 3
+      ItemHeight = 0
+      OnSelectionChange = LBDevSelectionChange
+      TabOrder = 0
+    end
+    object BBAddDev: TBitBtn
+      AnchorSideTop.Control = LBDev
+      AnchorSideRight.Control = GBSchemeOpts
+      Left = 424
+      Height = 30
+      Top = 23
+      Width = 170
+      Action = AcAddDevice
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 7
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object BBDelDev: TBitBtn
+      AnchorSideLeft.Control = BBAddDev
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BBAddDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BBClearAllConn
+      Left = 424
+      Height = 30
+      Top = 284
+      Width = 170
+      Action = AcDelDevice
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Bottom = 3
+      TabOrder = 2
+    end
+    object BBClearDev: TBitBtn
+      AnchorSideLeft.Control = BBAddDev
+      AnchorSideRight.Control = BBAddDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = LBDev
+      AnchorSideBottom.Side = asrBottom
+      Left = 424
+      Height = 30
+      Top = 350
+      Width = 170
+      Action = AcClearAllDev
+      Anchors = [akLeft, akRight, akBottom]
+      Caption = 'Clear All'
+      TabOrder = 3
+    end
+    object LabDev: TLabel
+      AnchorSideLeft.Control = Panel
+      AnchorSideTop.Control = Panel
+      Left = 8
+      Height = 14
+      Top = 6
+      Width = 45
+      BorderSpacing.Left = 7
+      BorderSpacing.Top = 5
+      Caption = 'Devices'
+      ParentColor = False
+    end
+    object PanConn: TPanel
+      AnchorSideLeft.Control = Panel
+      AnchorSideTop.Control = SplitterH
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GBDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel
+      AnchorSideBottom.Side = asrBottom
+      Left = 4
+      Height = 248
+      Top = 388
+      Width = 413
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 3
+      BorderSpacing.Bottom = 3
+      ClientHeight = 248
+      ClientWidth = 413
+      Enabled = False
+      TabOrder = 4
+      object LBConn: TListBox
+        AnchorSideLeft.Control = LabConn
+        AnchorSideTop.Control = LabConn
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Control = PanConn
+        AnchorSideBottom.Side = asrBottom
+        Left = 8
+        Height = 221
+        Top = 23
+        Width = 196
+        Anchors = [akTop, akLeft, akBottom]
+        BorderSpacing.Top = 3
+        BorderSpacing.Bottom = 3
+        ItemHeight = 0
+        OnSelectionChange = LBConnSelectionChange
+        TabOrder = 0
+      end
+      object LabConn: TLabel
+        AnchorSideLeft.Control = PanConn
+        AnchorSideTop.Control = PanConn
+        Left = 8
+        Height = 14
+        Top = 6
+        Width = 71
+        BorderSpacing.Left = 7
+        BorderSpacing.Top = 5
+        Caption = 'Connections'
+        ParentColor = False
+      end
+      object LabCon: TLabel
+        AnchorSideLeft.Control = LBConn
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = LabConn
+        Left = 211
+        Height = 14
+        Top = 6
+        Width = 64
+        BorderSpacing.Left = 7
+        Caption = 'Connection'
+        ParentColor = False
+      end
+      object GBConn: TGroupBox
+        AnchorSideLeft.Control = LabCon
+        AnchorSideTop.Control = LBConn
+        AnchorSideRight.Control = PanConn
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = LBConn
+        AnchorSideBottom.Side = asrBottom
+        Left = 211
+        Height = 149
+        Top = 23
+        Width = 194
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Right = 7
+        ClientHeight = 145
+        ClientWidth = 190
+        Enabled = False
+        TabOrder = 1
+        object CBArrow: TCheckBox
+          AnchorSideLeft.Control = GBConn
+          AnchorSideTop.Control = GBConn
+          Left = 7
+          Height = 19
+          Top = 7
+          Width = 57
+          BorderSpacing.Left = 7
+          BorderSpacing.Top = 7
+          Caption = 'Arrow'
+          OnChange = CBArrowChange
+          TabOrder = 0
+        end
+        object CBDash: TCheckBox
+          AnchorSideLeft.Control = CBArrow
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = CBArrow
+          Left = 79
+          Height = 19
+          Top = 7
+          Width = 69
+          BorderSpacing.Left = 15
+          Caption = 'Dashed'
+          OnChange = CBDashChange
+          TabOrder = 1
+        end
+        object CBDot: TCheckBox
+          AnchorSideLeft.Control = CBDash
+          AnchorSideTop.Control = CBBold
+          Left = 79
+          Height = 19
+          Top = 29
+          Width = 61
+          Caption = 'Dotted'
+          OnChange = CBDotChange
+          TabOrder = 2
+        end
+        object LabCPC: TLabel
+          AnchorSideLeft.Control = CBBold
+          AnchorSideTop.Control = ClrBtnConClr
+          AnchorSideTop.Side = asrCenter
+          Left = 7
+          Height = 14
+          Top = 100
+          Width = 56
+          Caption = 'Pen Color'
+          ParentColor = False
+        end
+        object ClrBtnConClr: TColorButton
+          AnchorSideTop.Control = CBLConnVertThenHor
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GBConn
+          AnchorSideRight.Side = asrBottom
+          Left = 125
+          Height = 25
+          Top = 95
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 5
+          BorderWidth = 2
+          ButtonColorSize = 16
+          ButtonColor = clBlack
+          OnColorChanged = ClrBtnConClrColorChanged
+        end
+        object CBBold: TCheckBox
+          AnchorSideLeft.Control = CBArrow
+          AnchorSideTop.Control = CBArrow
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 19
+          Top = 29
+          Width = 50
+          BorderSpacing.Top = 3
+          Caption = 'Bold'
+          OnChange = CBBoldChange
+          TabOrder = 3
+        end
+        object SBtnDefConClr: TSpeedButton
+          AnchorSideTop.Control = ClrBtnConClr
+          AnchorSideRight.Control = ClrBtnConClr
+          AnchorSideBottom.Control = ClrBtnConClr
+          AnchorSideBottom.Side = asrBottom
+          Left = 95
+          Height = 25
+          Top = 95
+          Width = 30
+          Anchors = [akTop, akRight, akBottom]
+          Caption = 'Def'
+          OnClick = SBtnDefConClrClick
+        end
+        object CBLConnection: TCheckBox
+          AnchorSideLeft.Control = CBArrow
+          AnchorSideTop.Control = CBBold
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 19
+          Top = 51
+          Width = 99
+          BorderSpacing.Top = 3
+          Caption = 'L-Connection'
+          OnChange = CBLConnectionChange
+          TabOrder = 4
+        end
+        object CBLConnVertThenHor: TCheckBox
+          AnchorSideLeft.Control = CBArrow
+          AnchorSideTop.Control = CBLConnection
+          AnchorSideTop.Side = asrBottom
+          Left = 7
+          Height = 19
+          Top = 73
+          Width = 147
+          BorderSpacing.Top = 3
+          Caption = 'L-Conn. Vert. then Hor.'
+          OnChange = CBLConnVertThenHorChange
+          TabOrder = 5
+        end
+      end
+      object BBReverseCon: TBitBtn
+        AnchorSideLeft.Control = BBDelOut
+        AnchorSideRight.Control = BBDelOut
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = BBDelOut
+        Left = 255
+        Height = 30
+        Top = 181
+        Width = 150
+        Anchors = [akLeft, akRight, akBottom]
+        BorderSpacing.Bottom = 3
+        Caption = 'Reverse Conn.'
+        OnClick = BBReverseConClick
+        TabOrder = 2
+      end
+      object BBDelOut: TBitBtn
+        AnchorSideRight.Control = PanConn
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = PanConn
+        AnchorSideBottom.Side = asrBottom
+        Left = 255
+        Height = 30
+        Top = 214
+        Width = 150
+        Anchors = [akRight, akBottom]
+        BorderSpacing.Right = 7
+        BorderSpacing.Bottom = 3
+        Caption = 'Delete Conn.'
+        OnClick = BBDelOutClick
+        TabOrder = 3
+      end
+    end
+    object GBDev: TGroupBox
+      AnchorSideLeft.Control = LabDevice
+      AnchorSideTop.Control = LBDev
+      AnchorSideRight.Control = BBAddDev
+      AnchorSideBottom.Control = LBDev
+      AnchorSideBottom.Side = asrBottom
+      Left = 215
+      Height = 149
+      Top = 23
+      Width = 202
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 7
+      ClientHeight = 145
+      ClientWidth = 198
+      Enabled = False
+      TabOrder = 5
+      object LabCap: TLabel
+        AnchorSideLeft.Control = GBDev
+        AnchorSideTop.Control = GBDev
+        Left = 7
+        Height = 14
+        Top = 7
+        Width = 116
+        BorderSpacing.Left = 7
+        BorderSpacing.Top = 7
+        Caption = 'Caption / Description'
+        ParentColor = False
+      end
+      object MemCap: TMemo
+        AnchorSideLeft.Control = LabCap
+        AnchorSideTop.Control = LabCap
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = GBDev
+        AnchorSideRight.Side = asrBottom
+        Left = 7
+        Height = 52
+        Top = 24
+        Width = 184
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 3
+        BorderSpacing.Right = 7
+        OnEditingDone = MemCapEditingDone
+        TabOrder = 0
+      end
+      object MemDesc: TMemo
+        AnchorSideLeft.Control = LabCap
+        AnchorSideTop.Control = MemCap
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = MemCap
+        AnchorSideRight.Side = asrBottom
+        Left = 7
+        Height = 52
+        Top = 81
+        Width = 184
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 5
+        OnEditingDone = MemDescEditingDone
+        TabOrder = 1
+      end
+    end
+    object LabDevice: TLabel
+      AnchorSideLeft.Control = LBDev
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = LabDev
+      Left = 215
+      Height = 14
+      Top = 6
+      Width = 59
+      BorderSpacing.Left = 7
+      Caption = 'LabDevice'
+      ParentColor = False
+    end
+    object GBSchemeOpts: TGroupBox
+      AnchorSideTop.Control = LabDev
+      AnchorSideRight.Control = Panel
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = Panel
+      AnchorSideBottom.Side = asrBottom
+      Left = 601
+      Height = 630
+      Top = 6
+      Width = 220
+      Anchors = [akTop, akRight, akBottom]
+      BorderSpacing.Right = 3
+      BorderSpacing.Bottom = 3
+      Caption = 'Scheme Options'
+      ClientHeight = 612
+      ClientWidth = 216
+      TabOrder = 6
+      object GBGrid: TGroupBox
+        AnchorSideLeft.Control = CGSchemeOpts
+        AnchorSideTop.Control = CGSchemeOpts
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CGSchemeOpts
+        AnchorSideRight.Side = asrBottom
+        Left = 4
+        Height = 95
+        Top = 157
+        Width = 208
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 3
+        ClientHeight = 91
+        ClientWidth = 204
+        TabOrder = 0
+        object SEGrid: TSpinEdit
+          AnchorSideTop.Control = CBSnapToGrid
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GBGrid
+          AnchorSideRight.Side = asrBottom
+          Left = 137
+          Height = 19
+          Top = 48
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 7
+          OnChange = SEGridChange
+          TabOrder = 0
+        end
+        object LabGrid: TLabel
+          AnchorSideLeft.Control = CBShowGrid
+          AnchorSideTop.Control = SEGrid
+          AnchorSideTop.Side = asrCenter
+          Left = 5
+          Height = 14
+          Top = 50
+          Width = 95
+          Caption = 'Grid Size (min. 8)'
+          ParentColor = False
+        end
+        object CBShowGrid: TCheckBox
+          AnchorSideLeft.Control = GBGrid
+          AnchorSideTop.Control = GBGrid
+          Left = 5
+          Height = 19
+          Top = 5
+          Width = 82
+          BorderSpacing.Left = 5
+          BorderSpacing.Top = 5
+          Caption = 'Show Grid'
+          OnChange = CBShowGridChange
+          TabOrder = 1
+        end
+        object CBSnapToGrid: TCheckBox
+          AnchorSideLeft.Control = CBShowGrid
+          AnchorSideTop.Control = CBShowGrid
+          AnchorSideTop.Side = asrBottom
+          Left = 5
+          Height = 19
+          Top = 24
+          Width = 93
+          Caption = 'Snap to Grid'
+          OnChange = CBSnapToGridChange
+          TabOrder = 2
+        end
+      end
+      object GBImages: TGroupBox
+        AnchorSideLeft.Control = CGSchemeOpts
+        AnchorSideTop.Control = GBBlockSpec
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CGSchemeOpts
+        AnchorSideRight.Side = asrBottom
+        Left = 4
+        Height = 85
+        Top = 511
+        Width = 208
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 3
+        ClientHeight = 81
+        ClientWidth = 204
+        TabOrder = 1
+        object CBImages: TCheckBox
+          AnchorSideLeft.Control = GBImages
+          AnchorSideTop.Control = GBImages
+          Left = 5
+          Height = 19
+          Top = 5
+          Width = 108
+          BorderSpacing.Left = 5
+          BorderSpacing.Top = 5
+          Caption = 'Assign Images'
+          OnChange = CBImagesChange
+          TabOrder = 0
+        end
+        object LabLayout: TLabel
+          AnchorSideLeft.Control = CBImages
+          AnchorSideTop.Control = CmbLayout
+          AnchorSideTop.Side = asrCenter
+          Left = 5
+          Height = 14
+          Top = 30
+          Width = 37
+          Caption = 'Layout'
+          ParentColor = False
+        end
+        object CmbLayout: TComboBox
+          AnchorSideTop.Control = CBImages
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GBImages
+          AnchorSideRight.Side = asrBottom
+          Left = 99
+          Height = 20
+          Top = 27
+          Width = 100
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 5
+          ItemHeight = 14
+          ItemIndex = 3
+          Items.Strings = (
+            'eopTop'
+            'eopRight'
+            'eopBottom'
+            'eopLeft'
+          )
+          OnChange = CmbLayoutChange
+          Style = csDropDownList
+          TabOrder = 1
+          Text = 'eopLeft'
+        end
+      end
+      object GBSchemeOptsEx: TGroupBox
+        AnchorSideLeft.Control = CGSchemeOpts
+        AnchorSideTop.Control = GBGrid
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CGSchemeOpts
+        AnchorSideRight.Side = asrBottom
+        Left = 4
+        Height = 75
+        Top = 255
+        Width = 208
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 3
+        ClientHeight = 71
+        ClientWidth = 204
+        TabOrder = 2
+        object LabCPW: TLabel
+          AnchorSideLeft.Control = LabFS
+          AnchorSideTop.Control = SECPW
+          AnchorSideTop.Side = asrCenter
+          Left = 5
+          Height = 14
+          Top = 31
+          Width = 57
+          BorderSpacing.Right = 5
+          Caption = 'Pen Width'
+          ParentColor = False
+        end
+        object LabFS: TLabel
+          AnchorSideLeft.Control = GBSchemeOptsEx
+          AnchorSideTop.Control = SEFS
+          AnchorSideTop.Side = asrCenter
+          Left = 5
+          Height = 14
+          Top = 7
+          Width = 51
+          BorderSpacing.Left = 5
+          Caption = 'Font Size'
+          ParentColor = False
+        end
+        object SECPW: TSpinEdit
+          AnchorSideTop.Control = SEFS
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = SEFS
+          AnchorSideRight.Side = asrBottom
+          Left = 139
+          Height = 19
+          Top = 29
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          MaxValue = 25
+          MinValue = 1
+          OnChange = SECPWChange
+          TabOrder = 0
+          Value = 1
+        end
+        object SEFS: TSpinEdit
+          AnchorSideTop.Control = GBSchemeOptsEx
+          AnchorSideRight.Control = GBSchemeOptsEx
+          AnchorSideRight.Side = asrBottom
+          Left = 139
+          Height = 19
+          Top = 5
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 5
+          OnChange = SEFSChange
+          TabOrder = 1
+        end
+      end
+      object GBBlockSpec: TGroupBox
+        AnchorSideLeft.Control = CGSchemeOpts
+        AnchorSideTop.Control = GBSchemeOptsEx
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CGSchemeOpts
+        AnchorSideRight.Side = asrBottom
+        Left = 4
+        Height = 175
+        Top = 333
+        Width = 208
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 3
+        ClientHeight = 171
+        ClientWidth = 204
+        TabOrder = 3
+        object SEBW: TSpinEdit
+          AnchorSideTop.Control = GBBlockSpec
+          AnchorSideRight.Control = GBBlockSpec
+          AnchorSideRight.Side = asrBottom
+          Left = 139
+          Height = 19
+          Top = 5
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 5
+          OnChange = SEBWChange
+          TabOrder = 0
+        end
+        object SEBH: TSpinEdit
+          AnchorSideTop.Control = SEBW
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = SEBW
+          AnchorSideRight.Side = asrBottom
+          Left = 139
+          Height = 19
+          Top = 29
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          OnChange = SEBHChange
+          TabOrder = 1
+        end
+        object LabBW: TLabel
+          AnchorSideLeft.Control = GBBlockSpec
+          AnchorSideTop.Control = SEBW
+          AnchorSideTop.Side = asrCenter
+          Left = 7
+          Height = 14
+          Top = 7
+          Width = 65
+          BorderSpacing.Left = 7
+          Caption = 'Block Width'
+          ParentColor = False
+        end
+        object LabBH: TLabel
+          AnchorSideLeft.Control = LabBW
+          AnchorSideTop.Control = SEBH
+          AnchorSideTop.Side = asrCenter
+          Left = 7
+          Height = 14
+          Top = 31
+          Width = 70
+          Caption = 'Block Height'
+          ParentColor = False
+        end
+        object LabBStyle: TLabel
+          AnchorSideLeft.Control = LabBW
+          AnchorSideTop.Control = CmbBlkStyle
+          AnchorSideTop.Side = asrCenter
+          Left = 7
+          Height = 14
+          Top = 56
+          Width = 60
+          Caption = 'Block Style'
+          ParentColor = False
+        end
+        object CmbBlkStyle: TComboBox
+          AnchorSideTop.Control = SEBH
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = SEBW
+          AnchorSideRight.Side = asrBottom
+          Left = 99
+          Height = 20
+          Top = 53
+          Width = 100
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          ItemHeight = 14
+          ItemIndex = 0
+          Items.Strings = (
+            'Button'
+            'Panel'
+            'Block'
+            'Rounded'
+            'Rhombus'
+            'Ellipse'
+          )
+          OnChange = CmbBlkStyleChange
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'Button'
+        end
+        object ClrBtnBlkClr: TColorButton
+          AnchorSideTop.Control = CmbBlkStyle
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = SEBW
+          AnchorSideRight.Side = asrBottom
+          Left = 139
+          Height = 25
+          Top = 78
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          BorderWidth = 2
+          ButtonColorSize = 16
+          ButtonColor = clBlack
+          OnColorChanged = ClrBtnBlkClrColorChanged
+        end
+        object LabBColor: TLabel
+          AnchorSideLeft.Control = LabBW
+          AnchorSideTop.Control = ClrBtnBlkClr
+          AnchorSideTop.Side = asrCenter
+          Left = 7
+          Height = 14
+          Top = 83
+          Width = 64
+          Caption = 'Block Color'
+          ParentColor = False
+        end
+        object ClrBtnBlkFntClr: TColorButton
+          AnchorSideTop.Control = ClrBtnBlkClr
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = SEBW
+          AnchorSideRight.Side = asrBottom
+          Left = 139
+          Height = 25
+          Top = 108
+          Width = 60
+          Anchors = [akTop, akRight]
+          BorderSpacing.Top = 5
+          BorderWidth = 2
+          ButtonColorSize = 16
+          ButtonColor = clBlack
+          OnColorChanged = ClrBtnBlkFntClrColorChanged
+        end
+        object LabFontColor: TLabel
+          AnchorSideLeft.Control = LabBW
+          AnchorSideTop.Control = ClrBtnBlkFntClr
+          AnchorSideTop.Side = asrCenter
+          Left = 7
+          Height = 14
+          Top = 113
+          Width = 58
+          Caption = 'Font Color'
+          ParentColor = False
+        end
+        object SBtnDefBlkClr: TSpeedButton
+          AnchorSideTop.Control = ClrBtnBlkClr
+          AnchorSideRight.Control = ClrBtnBlkClr
+          AnchorSideBottom.Control = ClrBtnBlkClr
+          AnchorSideBottom.Side = asrBottom
+          Left = 109
+          Height = 25
+          Top = 78
+          Width = 30
+          Anchors = [akTop, akRight, akBottom]
+          Caption = 'Def'
+          OnClick = SBtnDefBlkClrClick
+        end
+        object SBtnDefBlkFntClr: TSpeedButton
+          AnchorSideTop.Control = ClrBtnBlkFntClr
+          AnchorSideRight.Control = ClrBtnBlkFntClr
+          AnchorSideBottom.Control = ClrBtnBlkFntClr
+          AnchorSideBottom.Side = asrBottom
+          Left = 109
+          Height = 25
+          Top = 108
+          Width = 30
+          Anchors = [akTop, akRight, akBottom]
+          Caption = 'Def'
+          OnClick = SBtnDefBlkFntClrClick
+        end
+      end
+      object CGSchemeOpts: TCheckGroup
+        AnchorSideLeft.Control = GBSchemeOpts
+        AnchorSideTop.Control = GBSchemeOpts
+        AnchorSideRight.Control = GBSchemeOpts
+        AnchorSideRight.Side = asrBottom
+        Left = 4
+        Height = 150
+        Top = 4
+        Width = 208
+        Anchors = [akTop, akLeft, akRight]
+        AutoFill = True
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 1
+        ClientHeight = 146
+        ClientWidth = 204
+        Items.Strings = (
+          'Identical Blocks'
+          'Description on Block'
+          'Description to Hint'
+          'Full Drag Repaint'
+          'Rectangular Connections'
+          'Read Only'
+        )
+        OnItemClick = CGSchemeOptsItemClick
+        TabOrder = 4
+        Data = {
+          06000000020202020202
+        }
+      end
+    end
+    object SplitterH: TSplitter
+      AnchorSideLeft.Control = Panel
+      AnchorSideRight.Control = GBSchemeOpts
+      Cursor = crVSplit
+      Left = 1
+      Height = 8
+      Top = 380
+      Width = 600
+      Align = alNone
+      Anchors = [akLeft, akRight]
+      ResizeAnchor = akTop
+      ResizeStyle = rsLine
+    end
+    object GBDevOpts: TGroupBox
+      AnchorSideLeft.Control = BBAddDev
+      AnchorSideTop.Control = BBAddDev
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BBAddDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BBClearOuts
+      Left = 424
+      Height = 190
+      Top = 56
+      Width = 170
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Top = 3
+      BorderSpacing.Bottom = 5
+      ClientHeight = 186
+      ClientWidth = 166
+      Enabled = False
+      TabOrder = 8
+      object LabMaxIn: TLabel
+        AnchorSideLeft.Control = GBDevOpts
+        AnchorSideTop.Control = SEMaxIn
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 7
+        Width = 59
+        BorderSpacing.Left = 5
+        Caption = 'Max Inputs'
+        ParentColor = False
+      end
+      object SEMaxIn: TSpinEdit
+        AnchorSideTop.Control = GBDevOpts
+        AnchorSideRight.Control = GBDevOpts
+        AnchorSideRight.Side = asrBottom
+        Left = 101
+        Height = 19
+        Top = 5
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        OnChange = SEMaxInChange
+        TabOrder = 0
+      end
+      object SEMaxOut: TSpinEdit
+        AnchorSideTop.Control = SEMaxIn
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = SEMaxIn
+        AnchorSideRight.Side = asrBottom
+        Left = 101
+        Height = 19
+        Top = 29
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 5
+        OnChange = SEMaxOutChange
+        TabOrder = 1
+      end
+      object LabMaxOut: TLabel
+        AnchorSideLeft.Control = LabMaxIn
+        AnchorSideTop.Control = SEMaxOut
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 31
+        Width = 68
+        Caption = 'Max Outputs'
+        ParentColor = False
+      end
+      object CBFixed: TCheckBox
+        AnchorSideLeft.Control = LabMaxIn
+        AnchorSideTop.Control = SEMaxOut
+        AnchorSideTop.Side = asrBottom
+        Left = 5
+        Height = 19
+        Top = 51
+        Width = 54
+        BorderSpacing.Top = 3
+        Caption = 'Fixed'
+        OnChange = CBFixedChange
+        TabOrder = 2
+      end
+      object SEImageIdx: TSpinEdit
+        AnchorSideTop.Control = CBNoText
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = SEMaxIn
+        AnchorSideRight.Side = asrBottom
+        Left = 101
+        Height = 19
+        Top = 117
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 3
+        MinValue = -1
+        OnChange = SEImageIdxChange
+        TabOrder = 3
+      end
+      object LabImageIdx: TLabel
+        AnchorSideLeft.Control = LabMaxIn
+        AnchorSideTop.Control = SEImageIdx
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 119
+        Width = 68
+        Caption = 'Image Index'
+        ParentColor = False
+      end
+      object CBNoIcon: TCheckBox
+        AnchorSideLeft.Control = LabMaxIn
+        AnchorSideTop.Control = CBFixed
+        AnchorSideTop.Side = asrBottom
+        Left = 5
+        Height = 19
+        Top = 73
+        Width = 67
+        BorderSpacing.Top = 3
+        Caption = 'No Icon'
+        OnChange = CBNoIconChange
+        TabOrder = 4
+      end
+      object CBNoText: TCheckBox
+        AnchorSideLeft.Control = LabMaxIn
+        AnchorSideTop.Control = CBNoIcon
+        AnchorSideTop.Side = asrBottom
+        Left = 5
+        Height = 19
+        Top = 95
+        Width = 65
+        BorderSpacing.Top = 3
+        Caption = 'No Text'
+        OnChange = CBNoTextChange
+        TabOrder = 5
+      end
+      object SETag: TSpinEdit
+        AnchorSideLeft.Control = SEMaxIn
+        AnchorSideRight.Control = SEMaxIn
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = GBDevOpts
+        AnchorSideBottom.Side = asrBottom
+        Left = 101
+        Height = 19
+        Top = 162
+        Width = 60
+        Anchors = [akLeft, akRight, akBottom]
+        BorderSpacing.Bottom = 5
+        OnChange = SETagChange
+        TabOrder = 6
+      end
+      object LabTag: TLabel
+        AnchorSideLeft.Control = LabMaxIn
+        AnchorSideTop.Control = SETag
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 164
+        Width = 21
+        Caption = 'Tag'
+        ParentColor = False
+      end
+    end
+    object BBClearAllConn: TBitBtn
+      AnchorSideLeft.Control = BBClearDev
+      AnchorSideRight.Control = BBClearDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BBClearDev
+      Left = 424
+      Height = 30
+      Top = 317
+      Width = 170
+      Action = AcClearAllConn
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Bottom = 3
+      TabOrder = 9
+    end
+    object BBLoadDemo: TBitBtn
+      AnchorSideLeft.Control = BBSave
+      AnchorSideRight.Control = GBSchemeOpts
+      AnchorSideBottom.Control = BBLoad
+      Left = 426
+      Height = 30
+      Top = 540
+      Width = 170
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 3
+      Caption = 'Load Demo'
+      OnClick = BBLoadDemoClick
+      TabOrder = 10
+    end
+    object BBAutosize: TBitBtn
+      AnchorSideLeft.Control = BBSave
+      AnchorSideTop.Control = BevBtns
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BBSave
+      AnchorSideRight.Side = asrBottom
+      Left = 426
+      Height = 30
+      Top = 393
+      Width = 170
+      Action = AcAllAutosized
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 11
+    end
+    object BevBtns: TBevel
+      AnchorSideLeft.Control = BBAddDev
+      AnchorSideTop.Control = PanConn
+      AnchorSideRight.Control = BBAddDev
+      AnchorSideRight.Side = asrBottom
+      Left = 424
+      Height = 5
+      Top = 388
+      Width = 170
+      Anchors = [akTop, akLeft, akRight]
+      Shape = bsTopLine
+    end
+    object BBSave: TBitBtn
+      AnchorSideRight.Control = GBSchemeOpts
+      AnchorSideBottom.Control = Panel
+      AnchorSideBottom.Side = asrBottom
+      Left = 426
+      Height = 30
+      Top = 606
+      Width = 170
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 5
+      BorderSpacing.Bottom = 3
+      Caption = 'Save to XML'
+      OnClick = BBSaveClick
+      TabOrder = 12
+    end
+    object BBLoad: TBitBtn
+      AnchorSideLeft.Control = BBSave
+      AnchorSideRight.Control = BBSave
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BBSave
+      Left = 426
+      Height = 30
+      Top = 573
+      Width = 170
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Bottom = 3
+      Caption = 'Load from XML'
+      OnClick = BBLoadClick
+      TabOrder = 13
+    end
+    object GBDevSpec: TGroupBox
+      AnchorSideLeft.Control = GBDev
+      AnchorSideTop.Control = GBDev
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GBDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = LBDev
+      AnchorSideBottom.Side = asrBottom
+      Left = 215
+      Height = 205
+      Top = 175
+      Width = 202
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Top = 3
+      ClientHeight = 201
+      ClientWidth = 198
+      TabOrder = 14
+      object CmbDevStyle: TComboBox
+        AnchorSideTop.Control = CBAutosized
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = SEDevBW
+        AnchorSideRight.Side = asrBottom
+        Left = 93
+        Height = 20
+        Top = 73
+        Width = 100
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 3
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'Button'
+          'Panel'
+          'Block'
+          'Rounded'
+          'Rhombus'
+          'Ellipse'
+        )
+        OnChange = CmbDevStyleChange
+        Style = csDropDownList
+        TabOrder = 0
+        Text = 'Button'
+      end
+      object ClrBtnDevFntClr: TColorButton
+        AnchorSideTop.Control = ClrBtnDevClr
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = SEDevBW
+        AnchorSideRight.Side = asrBottom
+        Left = 133
+        Height = 25
+        Top = 128
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 5
+        BorderWidth = 2
+        ButtonColorSize = 16
+        ButtonColor = clBlack
+        OnColorChanged = ClrBtnDevFntClrColorChanged
+      end
+      object ClrBtnDevClr: TColorButton
+        AnchorSideTop.Control = CmbDevStyle
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = SEDevBW
+        AnchorSideRight.Side = asrBottom
+        Left = 133
+        Height = 25
+        Top = 98
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 5
+        BorderWidth = 2
+        ButtonColorSize = 16
+        ButtonColor = clBlack
+        OnColorChanged = ClrBtnDevClrColorChanged
+      end
+      object SBtnDefDevClr: TSpeedButton
+        AnchorSideTop.Control = ClrBtnDevClr
+        AnchorSideRight.Control = ClrBtnDevClr
+        AnchorSideBottom.Control = ClrBtnDevClr
+        AnchorSideBottom.Side = asrBottom
+        Left = 103
+        Height = 25
+        Top = 98
+        Width = 30
+        Anchors = [akTop, akRight, akBottom]
+        Caption = 'Def'
+        OnClick = SBtnDefDevClrClick
+      end
+      object SBtnDefDevFontClr: TSpeedButton
+        AnchorSideTop.Control = ClrBtnDevFntClr
+        AnchorSideRight.Control = ClrBtnDevFntClr
+        AnchorSideBottom.Control = ClrBtnDevFntClr
+        AnchorSideBottom.Side = asrBottom
+        Left = 103
+        Height = 25
+        Top = 128
+        Width = 30
+        Anchors = [akTop, akRight, akBottom]
+        Caption = 'Def'
+        OnClick = SBtnDefDevFontClrClick
+      end
+      object LabFColor: TLabel
+        AnchorSideLeft.Control = LabDevWidth
+        AnchorSideTop.Control = ClrBtnDevFntClr
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 133
+        Width = 58
+        Caption = 'Font Color'
+        ParentColor = False
+      end
+      object LabColor: TLabel
+        AnchorSideLeft.Control = LabDevWidth
+        AnchorSideTop.Control = ClrBtnDevClr
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 103
+        Width = 31
+        Caption = 'Color'
+        ParentColor = False
+      end
+      object LabStyle: TLabel
+        AnchorSideLeft.Control = LabDevWidth
+        AnchorSideTop.Control = CmbDevStyle
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 76
+        Width = 27
+        Caption = 'Style'
+        ParentColor = False
+      end
+      object CBAutosized: TCheckBox
+        AnchorSideLeft.Control = LabDevWidth
+        AnchorSideTop.Control = SEDevBH
+        AnchorSideTop.Side = asrBottom
+        Left = 5
+        Height = 19
+        Top = 51
+        Width = 78
+        BorderSpacing.Top = 3
+        Caption = 'Autosized'
+        OnChange = CBAutosizedChange
+        TabOrder = 1
+      end
+      object SEDevBW: TSpinEdit
+        AnchorSideLeft.Control = CBAutosized
+        AnchorSideTop.Control = GBDevSpec
+        AnchorSideRight.Control = GBDevSpec
+        AnchorSideRight.Side = asrBottom
+        Left = 133
+        Height = 19
+        Top = 5
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        OnChange = SEDevBWChange
+        TabOrder = 2
+      end
+      object LabDevWidth: TStaticText
+        AnchorSideLeft.Control = GBDevSpec
+        AnchorSideTop.Control = SEDevBW
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 7
+        Width = 32
+        AutoSize = True
+        BorderSpacing.Left = 5
+        Caption = 'Width'
+        TabOrder = 3
+      end
+      object SEDevBH: TSpinEdit
+        AnchorSideTop.Control = SEDevBW
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = SEDevBW
+        AnchorSideRight.Side = asrBottom
+        Left = 133
+        Height = 19
+        Top = 29
+        Width = 60
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 5
+        OnChange = SEDevBHChange
+        TabOrder = 4
+      end
+      object LabDevHeight: TStaticText
+        AnchorSideLeft.Control = LabDevWidth
+        AnchorSideTop.Control = SEDevBH
+        AnchorSideTop.Side = asrCenter
+        Left = 5
+        Height = 14
+        Top = 31
+        Width = 37
+        AutoSize = True
+        Caption = 'Height'
+        TabOrder = 5
+      end
+    end
+    object CGXMLFlags: TCheckGroup
+      AnchorSideLeft.Control = BBAutosize
+      AnchorSideTop.Control = BBAutosize
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = BBAutosize
+      AnchorSideRight.Side = asrBottom
+      Left = 426
+      Height = 105
+      Top = 426
+      Width = 170
+      Anchors = [akTop, akLeft, akRight]
+      AutoFill = True
+      BorderSpacing.Top = 3
+      Caption = 'XML Flags'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 87
+      ClientWidth = 166
+      Columns = 2
+      Items.Strings = (
+        'Caption'
+        'Config'
+        'Descript'
+        'Geometry'
+        'Scheme'
+        'Visuals'
+      )
+      TabOrder = 15
+      Data = {
+        06000000020202020202
+      }
+    end
+    object BBClearOuts: TBitBtn
+      AnchorSideLeft.Control = BBAddDev
+      AnchorSideRight.Control = BBAddDev
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = BBDelDev
+      Left = 424
+      Height = 30
+      Top = 251
+      Width = 170
+      Action = AcClearOuts
+      Anchors = [akLeft, akRight, akBottom]
+      BorderSpacing.Bottom = 3
+      TabOrder = 16
+    end
+  end
+  object SplitterV: TSplitter
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    Left = 447
+    Height = 540
+    Top = 0
+    Width = 8
+    Align = alNone
+    Anchors = [akTop]
+    AutoSnap = False
+    ResizeAnchor = akRight
+    ResizeStyle = rsLine
+  end
+  object PMScheme: TPopupMenu
+    left = 335
+    top = 552
+    object MIAddDev: TMenuItem
+      Action = AcAddDevice
+    end
+    object MISep3: TMenuItem
+      Caption = '-'
+    end
+    object MIDelDevice: TMenuItem
+      Action = AcDelDevice
+    end
+    object MIClearOut: TMenuItem
+      Caption = 'Clear Output'
+    end
+    object MIClearOutputs: TMenuItem
+      Action = AcClearOuts
+    end
+    object MIClearAllConn: TMenuItem
+      Action = AcClearAllConn
+      RadioItem = True
+    end
+    object MIClearDev: TMenuItem
+      Action = AcClearAllDev
+    end
+    object MISep5: TMenuItem
+      Caption = '-'
+    end
+    object MIAutosize: TMenuItem
+      Action = AcAllAutosized
+    end
+    object MIAreConnected: TMenuItem
+      Action = AcAreConnected
+    end
+  end
+  object IL1: TImageList
+    left = 267
+    top = 552
+    Bitmap = {
+      4C69080000001000000010000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000FFFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000FFFF0000FFFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000FFFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFFF4E00FFFF4E00FFFF4E00FFFF4E00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFFF4E
+      00FFFF4E00FFF8FCFCFFF8FCFCFFFF4E00FFFF4E00FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFFF4E00FFFF4E00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFFF4E00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFFF4E00FFFF4E00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFFF4E00FFFF4E00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFFF4E
+      00FFFF4E00FFFF4E00FFFF4E00FFFF4E00FFFF4E00FFFF4E00FFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFAB8300FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFAB8300FFAB8300FFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFAB83
+      00FFAB8300FFF8FCFCFFF8FCFCFFAB8300FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFAB83
+      00FFF8FCFCFFF8FCFCFFF8FCFCFFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFAB8300FFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFAB8300FFAB83
+      00FFF8FCFCFFF8FCFCFFF8FCFCFFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFAB83
+      00FFAB8300FFF8FCFCFFAB8300FFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFAB8300FFAB8300FFAB8300FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF43AE
+      00FF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF43AE
+      00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF43AE
+      00FFF8FCFCFFF8FCFCFFF8FCFCFF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF43AE
+      00FFF8FCFCFFF8FCFCFFF8FCFCFF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF43AE
+      00FF43AE00FF43AE00FF43AE00FF43AE00FF43AE00FF43AE00FFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF43AE00FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF43AEEBFF43AEEBFF43AEEBFF43AEEBFF43AEEBFF43AEEBFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF43AEEBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF43AEEBFF43AEEBFF43AEEBFF43AEEBFF43AEEBFF43AEEBFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF43AEEBFF43AEEBFFF8FCFCFFF8FCFCFFF8FCFCFF43AEEBFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF43AEEBFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF43AEEBFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF43AEEBFF43AEEBFF43AEEBFFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFF43AEEBFF43AEEBFF43AEEBFF43AEEBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF43AEEBFF43AEEBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFF4303EBFF4303EBFF4303EBFF4303EBFF4303EBFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF4303
+      EBFF4303EBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF4303
+      EBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFF4303EBFF4303
+      EBFFF8FCFCFF4303EBFF4303EBFF4303EBFF4303EBFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFF4303EBFF4303
+      EBFF4303EBFF4303EBFFF8FCFCFFF8FCFCFF4303EBFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFF4303EBFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF4303EBFF4303EBFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFF4303EBFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF4303EBFF4303EBFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFF4303EBFF4303
+      EBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF4303EBFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFF4303
+      EBFF4303EBFF4303EBFFF8FCFCFF4303EBFF4303EBFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF4303EBFF4303EBFF4303EBFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF89EB
+      A4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF89EB
+      A4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FF89EBA4FFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF89EB
+      A4FFF8FCFCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FF89EBA4FF89EBA4FFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FF89EBA4FFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF89EBA4FF89EBA4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      00000000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFF8922A4FF8922A4FF8922A4FF8922A4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF00000000000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF8922
+      A4FF8922A4FFF8FCFCFF8922A4FF8922A4FF8922A4FFF8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF8922
+      A4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF8922A4FFF8FCFCFFF8FC
+      FCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF8922
+      A4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF8922A4FFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF8922
+      A4FF8922A4FF8922A4FF8922A4FF8922A4FF8922A4FF8922A4FFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF00000000F8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FC
+      FCFF8922A4FF8922A4FF8922A4FF8922A4FF8922A4FF8922A4FFF8FCFCFFF8FC
+      FCFFF8FCFCFFF8FCFCFF0000000000000000F8FCFCFFF8FCFCFFF8FCFCFF8922
+      A4FF8922A4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF8922A4FF8922A4FFF8FC
+      FCFFF8FCFCFF000000000000000000000000F8FCFCFFF8FCFCFFF8FCFCFF8922
+      A4FFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF8922A4FFF8FC
+      FCFFF8FCFCFF00000000000000000000000000000000F8FCFCFFF8FCFCFF8922
+      A4FF8922A4FF8922A4FFF8FCFCFFF8FCFCFFF8FCFCFF8922A4FF8922A4FFF8FC
+      FCFF0000000000000000000000000000000000000000F8FCFCFFF8FCFCFFF8FC
+      FCFFF8FCFCFF8922A4FF8922A4FF8922A4FF8922A4FF8922A4FF8922A4FFF8FC
+      FCFF00000000000000000000000000000000000000000000000000000000F8FC
+      FCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFFF8FCFCFF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000F8FCFCFFF8FCFCFFF8FCFCFF0000000000000000000000000000
+      0000000000000000000000000000
+    }
+  end
+  object AL1: TActionList
+    left = 197
+    top = 552
+    object AcAddDevice: TAction
+      Caption = '&Add Device'
+      OnExecute = AcAddDeviceExecute
+    end
+    object AcDelDevice: TAction
+      Caption = '&Delete Device'
+      OnExecute = AcDelDeviceExecute
+    end
+    object AcClearAllConn: TAction
+      Caption = 'Clear All Conn.'
+      OnExecute = AcClearAllConnExecute
+    end
+    object AcClearAllDev: TAction
+      Caption = 'Clear Devices'
+      OnExecute = AcClearAllDevExecute
+    end
+    object AcClearOuts: TAction
+      Caption = 'Clear Outputs'
+      OnExecute = AcClearOutsExecute
+    end
+    object AcAllAutosized: TAction
+      Caption = 'Set All Autosized'
+      OnExecute = AcAllAutosizedExecute
+    end
+    object AcSaveToXML: TAction
+      Caption = 'AcSaveToXML'
+      OnExecute = AcSaveToXMLExecute
+    end
+    object AcAreConnected: TAction
+      Caption = 'Are Connected...'
+      OnExecute = AcAreConnectedExecute
+    end
+  end
+  object DlgOpen: TOpenDialog
+    DefaultExt = '.xml'
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 197
+    top = 483
+  end
+  object DlgSave: TSaveDialog
+    DefaultExt = '.xml'
+    left = 267
+    top = 483
+  end
+end

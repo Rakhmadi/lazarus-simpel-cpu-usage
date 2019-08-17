@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="51"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="37"/>
+        <CursorPos Y="65"/>
+        <UsageCount Value="51"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../EC_Controls/ecscheme.pas"/>
+        <UnitName Value="ECScheme"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1288"/>
+        <CursorPos X="41" Y="1299"/>
+        <UsageCount Value="26"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="/home/v1/Lazarus_Qt/lazarus/lcl/include/wincontrol.inc"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="7692"/>
+        <CursorPos Y="7712"/>
+        <UsageCount Value="22"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../EC_Controls/ectypes.pas"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1277"/>
+        <CursorPos X="27" Y="1302"/>
+        <UsageCount Value="22"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/home/v1/Lazarus_Qt/lazarus/lcl/include/buttons.inc"/>
+        <TopLine Value="150"/>
+        <CursorPos Y="170"/>
+        <UsageCount Value="7"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/home/v1/Lazarus_Qt/lazarus/lcl/include/buttoncontrol.inc"/>
+        <TopLine Value="35"/>
+        <CursorPos Y="55"/>
+        <UsageCount Value="7"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="/home/v1/Lazarus_Qt/lazarus/lcl/include/control.inc"/>
+        <TopLine Value="2701"/>
+        <CursorPos Y="2720"/>
+        <UsageCount Value="7"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:/lazarus/lcl/include/buttons.inc"/>
+        <WindowIndex Value="1"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:/lazarus/lcl/include/buttoncontrol.inc"/>
+        <WindowIndex Value="1"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:/lazarus/lcl/include/control.inc"/>
+        <WindowIndex Value="1"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+  </ProjectSession>
+</CONFIG>

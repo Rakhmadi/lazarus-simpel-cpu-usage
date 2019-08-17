@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+  <Scheme Count="15">
+    <Device Index="0">
+      <Caption Value="Input" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="19" ID="131"/>
+      <Top Value="17" ID="161"/>
+      <Width Value="70" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="0" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="3" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="1" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="1">
+      <Caption Value="Node1" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="12" ID="121"/>
+      <Left Value="48" ID="131"/>
+      <Top Value="111" ID="161"/>
+      <Width Value="12" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000001000" ID="146"/>
+      <Style Value="5" ID="156"/>
+      <MaxInputs Value="2" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="2" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="2">
+      <Caption Value="Filter" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="157" ID="131"/>
+      <Top Value="102" ID="161"/>
+      <Width Value="80" ID="166"/>
+      <Color Value="$0000CC00" ID="106"/>
+      <FontColor Value="$0000CC00" ID="116"/>
+      <ImageIndex Value="1" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="2" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="3" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="3">
+      <Caption Value="Node2" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="12" ID="121"/>
+      <Left Value="295" ID="131"/>
+      <Top Value="111" ID="161"/>
+      <Width Value="12" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000001000" ID="146"/>
+      <Style Value="5" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="2" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="2">
+        <Output0 ID="151">
+          <Input Value="5" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110100000000000000000000001101" ID="146"/>
+        </Output0>
+        <Output1 ID="151">
+          <Input Value="4" ID="126"/>
+          <Color Value="clBlue" ID="106"/>
+          <Options Value="01011100000000000000000000010111" ID="146"/>
+        </Output1>
+      </Connections>
+    </Device>
+    <Device Index="4">
+      <Caption Value="Feedback" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="153" ID="131"/>
+      <Top Value="152" ID="161"/>
+      <Width Value="75" ID="166"/>
+      <Color Value="clBlue" ID="106"/>
+      <FontColor Value="clBlue" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="3" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="1" ID="126"/>
+          <Color Value="clBlue" ID="106"/>
+          <Options Value="01010100000000000000000000010101" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="5">
+      <Caption Value="Modulator" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="312" ID="131"/>
+      <Top Value="228" ID="161"/>
+      <Width Value="100" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="2" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="3" ID="156"/>
+      <MaxInputs Value="2" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="7" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="6">
+      <Caption Value="Osc.0" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="355" ID="131"/>
+      <Top Value="33" ID="161"/>
+      <Width Value="70" ID="166"/>
+      <Color Value="$000000CC" ID="106"/>
+      <FontColor Value="$000000CC" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="5" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="5" ID="126"/>
+          <Color Value="clRed" ID="106"/>
+          <Options Value="00010000000000000000000000000100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="7">
+      <Caption Value="Modulator" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="26" ID="131"/>
+      <Top Value="228" ID="161"/>
+      <Width Value="100" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="3" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="3" ID="156"/>
+      <MaxInputs Value="2" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="9" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00111100000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="8">
+      <Caption Value="Osc.1" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="9" ID="131"/>
+      <Top Value="414" ID="161"/>
+      <Width Value="60" ID="166"/>
+      <Color Value="$000000CC" ID="106"/>
+      <FontColor Value="$000000CC" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="5" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="7" ID="126"/>
+          <Color Value="clRed" ID="106"/>
+          <Options Value="00010000000000000000000000000100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="9">
+      <Caption Value="Equalizer" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="50" ID="121"/>
+      <Left Value="74" ID="131"/>
+      <Top Value="384" ID="161"/>
+      <Width Value="100" ID="166"/>
+      <Color Value="$00CC0066" ID="106"/>
+      <FontColor Value="$00CC0066" ID="116"/>
+      <ImageIndex Value="4" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="4" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="11" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="10">
+      <Caption Value="Output" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="347" ID="131"/>
+      <Top Value="491" ID="161"/>
+      <Width Value="75" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="6" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="3" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+    </Device>
+    <Device Index="11">
+      <Caption Value="Node3" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="12" ID="121"/>
+      <Left Value="206" ID="131"/>
+      <Top Value="403" ID="161"/>
+      <Width Value="12" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000001000" ID="146"/>
+      <Style Value="5" ID="156"/>
+      <MaxInputs Value="2" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="13" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="12">
+      <Caption Value="Node4" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="12" ID="121"/>
+      <Left Value="341" ID="131"/>
+      <Top Value="403" ID="161"/>
+      <Width Value="12" ID="166"/>
+      <Color Value="clBlack" ID="106"/>
+      <FontColor Value="clBlack" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000001000" ID="146"/>
+      <Style Value="5" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="2" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="2">
+        <Output0 ID="151">
+          <Input Value="10" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110100000000000000000000001101" ID="146"/>
+        </Output0>
+        <Output1 ID="151">
+          <Input Value="14" ID="126"/>
+          <Color Value="clBlue" ID="106"/>
+          <Options Value="01011100000000000000000000010111" ID="146"/>
+        </Output1>
+      </Connections>
+    </Device>
+    <Device Index="13">
+      <Caption Value="Echo" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="242" ID="131"/>
+      <Top Value="394" ID="161"/>
+      <Width Value="70" ID="166"/>
+      <Color Value="$00009999" ID="106"/>
+      <FontColor Value="$00009999" ID="116"/>
+      <ImageIndex Value="5" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="2" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="12" ID="126"/>
+          <Color Value="clDefault" ID="106"/>
+          <Options Value="00110000000000000000000000001100" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <Device Index="14">
+      <Caption Value="Feedback" ID="101"/>
+      <Description Value="" ID="111"/>
+      <Height Value="30" ID="121"/>
+      <Left Value="244" ID="131"/>
+      <Top Value="452" ID="161"/>
+      <Width Value="75" ID="166"/>
+      <Color Value="clBlue" ID="106"/>
+      <FontColor Value="clBlue" ID="116"/>
+      <ImageIndex Value="-1" ID="123"/>
+      <Options Value="00000000000000000000000000000000" ID="146"/>
+      <Style Value="3" ID="156"/>
+      <MaxInputs Value="1" ID="136"/>
+      <MaxOutputs Value="1" ID="141"/>
+      <Tag Value="0" ID="159"/>
+      <Connections ID="501" Count="1">
+        <Output0 ID="151">
+          <Input Value="11" ID="126"/>
+          <Color Value="clBlue" ID="106"/>
+          <Options Value="01010100000000000000000000010101" ID="146"/>
+        </Output0>
+      </Connections>
+    </Device>
+    <BlockColor Value="clBlack" ID="401"/>
+    <BlockFontSize Value="8" ID="406"/>
+    <BlockHeight Value="30" ID="411"/>
+    <BlockStyle Value="0" ID="416"/>
+    <BlockWidtht Value="40" ID="421"/>
+    <ConnectColor Value="clBlack" ID="426"/>
+    <ConnectWidth Value="1" ID="431"/>
+    <GridSize Value="8" ID="436"/>
+    <Indent Value="8" ID="441"/>
+    <Layout Value="3" ID="446"/>
+    <Options Value="00000000000000000000000001011000" ID="146"/>
+  </Scheme>
+</ROOT>

@@ -1,0 +1,15 @@
+﻿Benchmark for ColorToString
+
+2018-03-09: ECSpins: Max or Min sometimes don't disable buttons (on the first click) when value is like 0,999999...
+
+2018-02-19: Mention Flávio in composite components licence header & wiki
+
+2018-01-20: TGlyphDesign: resolve painting for hi-dpi desktops
+
+2017-09-27: Replace MouseEntered (deprecated) with MouseInClient
+
+2017-03-31/01: Better editaiton of TECConfCurve (adding notes + Bezier values)
+
+2017-03-31/02: Clipping text of TBitmap.Canvas doesn't work (issue 32560).
+
+

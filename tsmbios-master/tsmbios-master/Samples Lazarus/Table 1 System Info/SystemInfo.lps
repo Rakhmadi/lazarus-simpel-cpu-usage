@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="SystemInfo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="..\..\Common\uSMBIOS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="4308"/>
+        <CursorPos X="25" Y="4315"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2"/>
+        <CursorPos X="28" Y="11"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="26" Column="91" TopLine="14"/>
+      </Position1>
+      <Position2>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="9" Column="30"/>
+      </Position2>
+      <Position3>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="39" Column="17" TopLine="25"/>
+      </Position3>
+      <Position4>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="13" Column="13" TopLine="4"/>
+      </Position4>
+      <Position5>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="45" Column="5" TopLine="31"/>
+      </Position5>
+      <Position6>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="48" TopLine="31"/>
+      </Position6>
+      <Position7>
+        <Filename Value="..\..\Common\uSMBIOS.pas"/>
+      </Position7>
+      <Position8>
+        <Filename Value="SystemInfo.lpr"/>
+        <Caret Line="35" Column="14" TopLine="31"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

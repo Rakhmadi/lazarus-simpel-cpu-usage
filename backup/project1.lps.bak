@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos Y="22"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="fuea\unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="328"/>
+        <CursorPos X="35" Y="330"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unit3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit3"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="47"/>
+        <CursorPos X="23" Y="22"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unit2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="66"/>
+        <CursorPos X="24" Y="72"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="D:\make battr\unit2.pas"/>
+        <UnitName Value="Unit2"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="16" Y="39"/>
+        <UsageCount Value="11"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2195"/>
+        <CursorPos Y="2204"/>
+        <UsageCount Value="8"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="ATSynEdit-master\ATSynEdit-master\app\demo_load\ATFlatControls-master\ATFlatControls-master\atflatcontrols\atbuttons.pas"/>
+        <UnitName Value="ATButtons"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="397"/>
+        <CursorPos X="56" Y="414"/>
+        <UsageCount Value="8"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="3263"/>
+        <CursorPos Y="3271"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="342" Column="58" TopLine="324"/>
+      </Position1>
+      <Position2>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="322" Column="34" TopLine="315"/>
+      </Position2>
+      <Position3>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="321" Column="34" TopLine="314"/>
+      </Position3>
+      <Position4>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="342" Column="54" TopLine="328"/>
+      </Position4>
+      <Position5>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="329" Column="27" TopLine="324"/>
+      </Position5>
+      <Position6>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="337" Column="27" TopLine="324"/>
+      </Position6>
+      <Position7>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="331" Column="30" TopLine="324"/>
+      </Position7>
+      <Position8>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="330" Column="12" TopLine="318"/>
+      </Position8>
+      <Position9>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="332" Column="39" TopLine="318"/>
+      </Position9>
+      <Position10>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="333" Column="37" TopLine="319"/>
+      </Position10>
+      <Position11>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="342" Column="7" TopLine="326"/>
+      </Position11>
+      <Position12>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="355" Column="3" TopLine="353"/>
+      </Position12>
+      <Position13>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="356" Column="3" TopLine="354"/>
+      </Position13>
+      <Position14>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="355" Column="3" TopLine="353"/>
+      </Position14>
+      <Position15>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="180" Column="23" TopLine="168"/>
+      </Position15>
+      <Position16>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="243" Column="31" TopLine="225"/>
+      </Position16>
+      <Position17>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="245" Column="31" TopLine="227"/>
+      </Position17>
+      <Position18>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="369" Column="14" TopLine="367"/>
+      </Position18>
+      <Position19>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="375" Column="24" TopLine="369"/>
+      </Position19>
+      <Position20>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="230" Column="36" TopLine="218"/>
+      </Position20>
+      <Position21>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="377" Column="35" TopLine="371"/>
+      </Position21>
+      <Position22>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="376" Column="25" TopLine="372"/>
+      </Position22>
+      <Position23>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="235" Column="3" TopLine="218"/>
+      </Position23>
+      <Position24>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="364" Column="3" TopLine="362"/>
+      </Position24>
+      <Position25>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="329" Column="28" TopLine="322"/>
+      </Position25>
+      <Position26>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="331" Column="43" TopLine="318"/>
+      </Position26>
+      <Position27>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="22"/>
+      </Position27>
+      <Position28>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="326" Column="19" TopLine="318"/>
+      </Position28>
+      <Position29>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="330" Column="3" TopLine="316"/>
+      </Position29>
+      <Position30>
+        <Filename Value="fuea\unit1.pas"/>
+        <Caret Line="182" Column="28" TopLine="331"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="project1.lpr"/>
+        <Line Value="22"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
